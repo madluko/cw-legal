@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support — Consensus Weather</title>
+  <meta name="description" content="Help and contact for Consensus Weather." />
+  <style>
+    :root { color-scheme: light dark; --ink: #0f1419; --muted: #5a6570; --bg: #f4f6f9; --card: #fff; --link: #2563eb; }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink: #e8eef5; --muted: #9aa8b5; --bg: #0b0e12; --card: #151a22; --link: #5b9dff; }
+    }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.55; }
+    main { max-width: 720px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    .card { background: var(--card); border-radius: 16px; padding: 1.5rem 1.35rem; }
+    h1 { font-size: 1.55rem; margin: 0 0 .35rem; }
+    h2 { font-size: 1.1rem; margin: 1.4rem 0 .45rem; }
+    .meta { color: var(--muted); font-size: .9rem; margin-bottom: 1rem; }
+    a { color: var(--link); }
+    ul { padding-left: 1.2rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card">
+      <h1>Support — Consensus Weather</h1>
+      <p class="meta">Multi-model weather, refined on your device.</p>
+
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:support@consensusweather.app">support@consensusweather.app</a></p>
+      <p>Privacy policy: <a href="../privacy/">Privacy</a></p>
+
+      <h2>Quick help</h2>
+      <ul>
+        <li><strong>Change location</strong> — tap the pin on Today, or Settings → Location.</li>
+        <li><strong>Units</strong> — Settings → Units (Metric / UK / Imperial).</li>
+        <li><strong>Models disagree</strong> — the app shows spread and still uses a weighted consensus; learning improves weights after a few days of actuals.</li>
+        <li><strong>Radar</strong> — Sky above → Radar for precipitation; Play loops past frames. Clouds is a single model field snapshot.</li>
+        <li><strong>Offline</strong> — last successful forecast is shown when the network fails; pull to refresh when back online.</li>
+        <li><strong>Alerts (desktop)</strong> — morning brief / rain soon use a background worker on Windows/Mac desktop. iOS closed-app alerts need a later native build.</li>
+      </ul>
+
+      <h2>Data sources</h2>
+      <p>Forecasts and geocoding: <a href="https://open-meteo.com">Open-Meteo</a>. Radar composites: RainViewer public API. Not an official meteorological or emergency service.</p>
+    </div>
+  </main>
+</body>
+</html>

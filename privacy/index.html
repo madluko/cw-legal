@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Consensus Weather</title>
+  <meta name="description" content="Privacy policy for Consensus Weather multi-model weather app." />
+  <style>
+    :root { color-scheme: light dark; --ink: #0f1419; --muted: #5a6570; --bg: #f4f6f9; --card: #fff; --link: #2563eb; }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink: #e8eef5; --muted: #9aa8b5; --bg: #0b0e12; --card: #151a22; --link: #5b9dff; }
+    }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.55; }
+    main { max-width: 720px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    .card { background: var(--card); border-radius: 16px; padding: 1.5rem 1.35rem; box-shadow: 0 1px 0 rgba(0,0,0,.06); }
+    h1 { font-size: 1.55rem; margin: 0 0 .35rem; }
+    h2 { font-size: 1.1rem; margin: 1.5rem 0 .5rem; }
+    p, li { color: var(--ink); }
+    .meta { color: var(--muted); font-size: .9rem; margin-bottom: 1.25rem; }
+    a { color: var(--link); }
+    ul { padding-left: 1.2rem; }
+    nav { margin-bottom: 1rem; font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <nav><a href="../support/">Support</a> · <a href="https://consensusweather.app">consensusweather.app</a></nav>
+    <div class="card">
+      <h1>Privacy Policy — Consensus Weather</h1>
+      <p class="meta">Last updated: 30 July 2026 · Bundle ID: com.consensusweather.app · Contact: <a href="mailto:support@consensusweather.app">support@consensusweather.app</a></p>
+
+      <h2>Summary</h2>
+      <ul>
+        <li>Weather forecasts are requested from <strong>Open-Meteo</strong> (third-party weather API).</li>
+        <li>Precipitation radar tiles may be loaded from <strong>RainViewer</strong>’s public API.</li>
+        <li>Model weights, forecast history, and preferences are stored <strong>on your device</strong>.</li>
+        <li>Location is <strong>optional</strong>. You can search for a city without enabling GPS.</li>
+        <li>We do <strong>not</strong> create user accounts or sell your personal data.</li>
+      </ul>
+
+      <h2>Location (optional)</h2>
+      <p>If you enable device location, the App may use your approximate coordinates to fetch forecasts for that place. You can turn this off at any time and use city search instead. Location is used only to request weather data for the selected place.</p>
+
+      <h2>Network requests</h2>
+      <p>When you refresh weather data, the App contacts Open-Meteo services (forecast, archive, air quality, marine/tides where available, and geocoding) with the coordinates or place name you chose. Open-Meteo’s terms apply: <a href="https://open-meteo.com">open-meteo.com</a>.</p>
+      <p>When you open the radar layer, the App may fetch map tiles and precipitation composites from RainViewer’s public weather-maps API and basemap tiles (e.g. Carto). Those services receive the map region you view.</p>
+
+      <h2>On-device storage</h2>
+      <p>The App stores on your device:</p>
+      <ul>
+        <li>Preferred location name and coordinates</li>
+        <li>Active forecast models and learned model weights</li>
+        <li>Recent forecast vs actual history used for learning</li>
+        <li>Theme, units, alerts prefs, streak, and first-run flags</li>
+        <li>Optional offline snapshot of the last successful forecast</li>
+      </ul>
+      <p>This data stays on the device unless you clear it (Settings → Reset learning) or uninstall / clear app data.</p>
+
+      <h2>Clipboard (optional)</h2>
+      <p>If you use Share or Export AI Feed, text or JSON is copied to the system clipboard so you can paste it elsewhere. That content is not uploaded by the App to our servers (the App has no backend of its own).</p>
+
+      <h2>What we do not do</h2>
+      <ul>
+        <li>We do not require sign-in.</li>
+        <li>We do not sell personal information.</li>
+        <li>We do not use the App for advertising tracking profiles.</li>
+        <li>We do not provide emergency or official severe-weather warnings.</li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>The App is a general weather utility and is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+      <h2>Changes</h2>
+      <p>We may update this policy as the App evolves. The “Last updated” date at the top will change when we do. Continued use after changes means you accept the updated policy.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about privacy: <a href="mailto:support@consensusweather.app">support@consensusweather.app</a><br />
+      Support page: <a href="../support/">Support</a></p>
+    </div>
+  </main>
+</body>
+</html>
