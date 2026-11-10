@@ -27,27 +27,30 @@
     <nav><a href="../">Home</a> · <a href="../support/">Support</a></nav>
     <div class="card">
       <h1>Privacy Policy — Consensus Weather</h1>
-      <p class="meta">Last updated: 9 November 2026 · Bundle ID: com.consensusweather.app · Contact: <a href="mailto:luke@pureformcreations.com">luke@pureformcreations.com</a></p>
+      <p class="meta">Last updated: 10 November 2026 · Bundle ID: com.consensusweather.app · Contact: <a href="mailto:luke@pureformcreations.com">luke@pureformcreations.com</a></p>
 
       <h2>Summary</h2>
       <ul>
-        <li>Weather forecasts are requested from <strong>Open-Meteo</strong> through our weather server on Cloudflare.</li>
+        <li>Weather forecasts, air quality, and pollen counts (where available) are requested from <strong>Open-Meteo</strong> through our weather server on Cloudflare.</li>
         <li>For places in England, the App may also load official <strong>Environment Agency</strong> flood alerts.</li>
-        <li>Precipitation radar tiles may be loaded from <strong>RainViewer</strong>’s public API; tide times may use <strong>NOAA CO-OPS</strong> where a nearby station exists.</li>
-        <li>Model weights, forecast history, and preferences are stored <strong>on your device</strong>.</li>
+        <li>For places in the United Kingdom, the App may also show official <strong>Met Office</strong> weather warnings. Warning text is Crown copyright.</li>
+        <li>Precipitation radar may use an <strong>Apple Maps</strong> basemap and tiles from <strong>RainViewer</strong>’s public API; tide times may use <strong>NOAA CO-OPS</strong> where a nearby station exists.</li>
+        <li>Model weights, forecast history, preferences, and optional rain and frost reminder settings are stored <strong>on your device</strong>.</li>
         <li>Location is <strong>optional</strong>. You can search for a city without enabling GPS.</li>
         <li>We do <strong>not</strong> create user accounts or sell your personal data.</li>
         <li>On the free plan, a banner ad may appear after consent. Ad requests are marked non-personalised.</li>
       </ul>
 
       <h2>Location (optional)</h2>
-      <p>If you enable device location, the App may use your approximate coordinates to fetch forecasts and related weather data for that place. You can turn this off at any time and use city search instead. Location is used only to request data for the selected place (forecasts, and for England, nearby flood alerts).</p>
+      <p>If you enable device location, the App may use your approximate coordinates to fetch forecasts and related weather data for that place. You can turn this off at any time and use city search instead. Location is used only to request data for the selected place (forecasts, air quality and pollen, and for England, nearby flood alerts). Official Met Office warnings are matched to the place on your device; that request does not include your location.</p>
 
       <h2>Network requests</h2>
-      <p>When you refresh weather data, the App sends an approximate location (coordinates rounded to about 1&nbsp;km / two decimal places) to our weather server, hosted on Cloudflare. That server requests forecast, air quality, marine, normals, and geocoding data from Open-Meteo on your behalf. The App also sends an anonymous install identifier (created and stored on your device; not an Apple ID or account) so the server can handle the request. Cloudflare processes your IP address to deliver the request. Open-Meteo’s terms apply to their services: <a href="https://open-meteo.com">open-meteo.com</a>.</p>
+      <p>When you refresh weather data, the App sends an approximate location (coordinates rounded to about 1&nbsp;km / two decimal places) to our weather server, hosted on Cloudflare. That server requests forecast, air quality, marine, normals, and geocoding data from Open-Meteo on your behalf. Pollen counts, where the forecast includes them, come from the same Open-Meteo air-quality request (CAMS Europe) as the European air-quality index, for the place you are viewing. The App also sends an anonymous install identifier (created and stored on your device; not an Apple ID or account) so the server can handle the request. Cloudflare processes your IP address to deliver the request. Open-Meteo’s terms apply to their services: <a href="https://open-meteo.com">open-meteo.com</a>.</p>
       <p>For places in England, the App may contact the Environment Agency flood-monitoring API (<a href="https://environment.data.gov.uk">environment.data.gov.uk</a>) directly with the same approximate coordinates (about 1&nbsp;km) and a search radius, to show nearby flood alerts and warnings on Today. That request does not include your install identifier, Apple ID, or any account. Coverage is England only. These are official Environment Agency alerts; they supplement <a href="https://www.gov.uk/check-flooding">Check for flooding on GOV.UK</a> and are not a safety-critical service or a replacement for official emergency channels.</p>
+      <p>For places in the United Kingdom, the App may load official Met Office National Severe Weather Warnings through our weather server. That request asks for the current UK warning list and does not include your location, install identifier, or any account. The phone then checks whether the place you chose falls inside a warning area. Warning text is shown as the Met Office wrote it, with the name “Met Office Weather Warnings”, the issue time, and Crown copyright credit (© Crown copyright, Met Office). This supplements the Met Office’s own channels at <a href="https://www.metoffice.gov.uk/weather/warnings-and-advice/uk-warnings">metoffice.gov.uk</a> and is not a safety-critical service or a replacement for official emergency channels. Consensus Weather’s own forecast cautions remain forecast-based and are not official Met Office or Environment Agency warnings. An optional mark on the Home Screen and Lock Screen widgets uses only the warning level already fetched for Today; the widget does not receive the warning wording and does not send your location.</p>
       <p>Where a NOAA tide station is close enough, the App may load high/low tide predictions from NOAA CO-OPS (<a href="https://api.tidesandcurrents.noaa.gov">api.tidesandcurrents.noaa.gov</a>). The nearest station is chosen on your device; the prediction request uses the station id, not your raw coordinates.</p>
-      <p>When you open the radar layer, the App may fetch map tiles and precipitation composites from RainViewer’s public weather-maps API and basemap tiles (ArcGIS or OpenStreetMap). Those services receive the map region you view.</p>
+      <p>When you open the radar layer, the App may load an Apple Maps basemap (MapKit) and fetch a public catalog and precipitation tiles from RainViewer’s weather-maps API. Those RainViewer requests carry the map tiles you view. They do not include your name, Apple ID, install identifier, or other personal data beyond what any web request includes, such as your IP address. A still of the map may be stored in the device cache so the card can show quickly or offline; that still is not uploaded.</p>
+      <p>Optional rain alerts and the morning frost reminder are created on your phone from the forecast already requested for your chosen place. Nothing extra is sent for these alerts. Rain alerts stay off until you turn them on. The frost reminder stays off until you opt in; if you do, the App may show one local notification on that phone in the early morning when the forecast says frost is likely. The reminder is not a Met Office warning.</p>
       <p>On the free plan, after you complete the Google User Messaging Platform consent flow where required, the App may load a Google AdMob banner. Ad requests are sent as non-personalised (<code>npa=1</code>). There is no App Tracking Transparency prompt. Premium removes ads; Apple processes Premium purchases under Apple’s privacy policy.</p>
 
       <h2>On-device storage</h2>
@@ -57,6 +60,9 @@
         <li>Active forecast models and learned model weights</li>
         <li>Recent forecast vs actual history used for learning</li>
         <li>Theme, units, alerts prefs, streak, and first-run flags</li>
+        <li>Optional rain-alert and frost-reminder settings, including a hashed place identifier used only to time rain alerts</li>
+        <li>Which Met Office warnings you have dismissed</li>
+        <li>Cached map stills of the radar basemap, kept in the device cache</li>
         <li>Optional offline snapshot of the last successful forecast</li>
         <li>An anonymous install identifier used only with the weather proxy</li>
         <li>Subscription / trial status (on device, and with Apple if you purchase Premium)</li>
@@ -71,7 +77,7 @@
         <li>We do not require sign-in.</li>
         <li>We do not sell personal information.</li>
         <li>We do not use the App for advertising tracking profiles.</li>
-        <li>We do not replace GOV.UK, the Environment Agency’s own channels, or emergency services. Forecast-based outdoor cautions in the App are labelled as forecast-based; they are not Met Office or Environment Agency warnings.</li>
+        <li>We do not replace GOV.UK, the Met Office, the Environment Agency’s own channels, or emergency services. Official Met Office warnings in the App are shown as the Met Office wrote them and supplement those channels. Forecast-based outdoor cautions and frost notes in the App are labelled as forecast-based; they are not Met Office or Environment Agency warnings.</li>
       </ul>
 
       <h2>Children</h2>
